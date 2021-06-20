@@ -1,0 +1,15 @@
+[submodule "3rdparty/memory"]
+	path = 3rdparty/memory
+	url = https://github.com/foonathan/memory.git
+[submodule "3rdparty/googletest"]
+	path = 3rdparty/googletest
+	url = https://github.com/google/googletest.git
+[submodule "3rdparty/Fast-CDR"]
+	path = 3rdparty/Fast-CDR
+	url = https://github.com/eProsima/Fast-CDR.git
+[submodule "3rdparty/tinyxml2"]
+	path = 3rdparty/tinyxml2
+	url = https://github.com/leethomason/tinyxml2.git
+[submodule "3rdparty/asio"]
+	path = 3rdparty/asio
+	url = https://github.com/chriskohlhoff/asio.git
