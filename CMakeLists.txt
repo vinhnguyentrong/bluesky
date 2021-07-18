@@ -19,7 +19,9 @@ ExternalProject_Add(memory_lib
       cmake --build . --target install
 )
 add_library(memory STATIC IMPORTED GLOBAL)
-set_property(TARGET memory PROPERTY IMPORTED_LOCATION ${CMAKE_INSTALL_PREFIX}/lib/libfoonathan_memory-0.7.0${MEMORY_DEBUG}.a)
+set_property(
+   TARGET memory 
+   PROPERTY IMPORTED_LOCATION ${CMAKE_INSTALL_PREFIX}/lib/libfoonathan_memory-0.7.0${MEMORY_DEBUG}.a)
 add_dependencies(memory memory_lib)
 
 # build fastcdr
@@ -90,12 +92,12 @@ ExternalProject_Add(fastrtps_lib
       -DPROFILING_TESTS=${BUILD_TESTS}
       -DEPROSIMA_BUILD_TESTS=${BUILD_TESTS}
    BUILD_COMMAND
-      cmake --build . --target install
+      cmake --build . --target install -- -j4
    DEPENDS
       fastcdr
       memory
       tinyxml2
-      googletest
+      # googletest
 )
 add_library(fastrtps STATIC IMPORTED GLOBAL)
 # set_property(TARGET fastrtps IMPORTED_LOCATION ${CMAKE_INSTALL_PREFIX}/lib)
