@@ -12,7 +12,7 @@ MEMORY_DEBUG=""
 
 BSROOT=$(realpath "..")
 # ORIGIN_DIR=${BSROOT}/cmake-x86-gnu-linux
-INSTALL_DIR=${BSROOT}/install_dir
+INSTALL_DIR=${BSROOT}/bluesky/install_dir
 # BUILD_DIR=${BSROOT}/build_dir
 WORK_SPACE=${BSROOT}/workspace
 
@@ -65,7 +65,7 @@ if [[ -d ${WORK_SPACE} ]]; then
    rm -r ${WORK_SPACE}/*
    #statements
 fi
-# mkdir -p ${WORK_SPACE}
+mkdir -p ${WORK_SPACE}
 cd ${WORK_SPACE}
 
 cmake \
@@ -74,4 +74,4 @@ cmake \
    -D BUILD_TYPE=${BUILD_MODE} \
    -D BUILD_TESTS=${BUILD_TESTS} \
    ${BSROOT}/bluesky
-# cmake --build . --target install
+cmake --build . --target install
